@@ -1,0 +1,240 @@
+.footer {
+  margin-top: auto;
+  background: url('../images/content/footer/footer-bg.jpg') no-repeat;
+  background-position: top left;
+  background-size: cover;
+
+  @include mobile {
+    background: url('../images/content/footer/footer-bg-mob.jpg') no-repeat;
+    background-position: top left;
+    background-size: cover;
+  }
+
+  &__top {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+
+    @include mobile {
+      padding-top: 50px;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  &__logo {
+    @include mobile {
+      width: 135px;
+      height: auto;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 359px;
+    flex: 0 0 359px;
+
+    @include tablet {
+      width: 265px;
+      flex: 0 0 265px;
+    }
+
+    @include mobile {
+      width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 16px;
+    }
+
+    & > * {
+      align-self: flex-start;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: flex-start;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    @include mobile {
+      margin-top: 16px;
+      font-size: 14px;
+    }
+  }
+
+  &__form {
+    margin-left: 100px;
+
+    @include tablet {
+      margin-left: 70px;
+    }
+
+    @include mobile {
+      margin-left: 0;
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(217, 217, 217, 0.18);
+    }
+  }
+
+  &__bottom {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(236, 236, 236, 0.19);
+
+    @include tablet {
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    @include mobile {
+      padding-bottom: 40px;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__copyright {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #BDBDBD;
+
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      margin-top: 10px;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__link{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #747474;
+
+    @include tablet {
+      font-size: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 25px;
+
+      @include mobile {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.nav {
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+
+    @include hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.form-subs {
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__group {
+    input {
+      padding: 0 20px;
+      width: 262px;
+      height: 60px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 60px;
+      letter-spacing: 0.05em;
+      color: #959595;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.27);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      outline: none;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    .btn__rounded {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+
+      svg {
+        fill: transparent;
+      }
+    }
+  }
+}

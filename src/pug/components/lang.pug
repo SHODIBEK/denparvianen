@@ -1,0 +1,10 @@
+.languages.js-lang
+  a(href="javascript:void(0);").languages__current
+    img(src="./images/icons/ru.png", alt="ru" width="22" height="15").languages__icon
+    span.languages__name 
+      | RU
+  .languages__items
+    each lang in data.header.languages
+      a(href="#" class=lang.icon == 'ru' ? 'languages__link--active' : '').languages__link
+        img(src=`./images/icons/${lang.icon}.png`, alt=lang.name width="22" height="15").languages__icon
+        span.languages__name.languages__name--secondary!=lang.name

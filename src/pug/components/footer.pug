@@ -1,0 +1,31 @@
+footer.footer
+  .container
+    .footer__wrapper
+      .footer__top
+        .footer__left
+          a(href="/").footer__logo
+            img(src="./logo.svg", alt="logo" width="172" height="60")
+          span.footer__text
+            | Lorem ipsum dolor sit amet consectetur. Tempor in volutpat ut nec tortor id. Platea diam.
+        .footer__right
+          nav.footer__nav.nav
+            .nav__items
+              each nav in data.header.menu
+                .nav__item
+                  a.nav__link(href=nav.url title!=nav.name)!=nav.name
+          form.footer__form.form-subs
+            .form-subs__title
+              | Будьте в курсе дела!
+            .form-subs__group.form-group
+              input(type="email", name="email" placeholder="Email адрес")
+              button(type="submit").btn.btn__rounded
+                +svg('send')
+      .footer__bottom
+        p.footer__copyright
+          | All Rights Reserved @DEN Parviainen <span data-actual-year></span>
+        .footer__links
+          a(href="#terms" title="Terms & Conditions").footer__link
+            | Terms & Conditions
+          a(href="#policy" title="Privacy & Policy").footer__link
+            | Privacy & Policy
+

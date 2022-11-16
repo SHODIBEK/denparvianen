@@ -1,0 +1,34 @@
+.socials {
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--secondary-color);
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    border: 1px solid #818181;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    width: 50%;
+    height: 50%;
+  }
+}

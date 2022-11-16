@@ -1,0 +1,7 @@
+.socials
+  .socials__title
+    | Мы в социалных сетях
+  .socials__items
+    each social in data.header.socials
+      a(href="#", title!=social target="_blank" rel='nofollow').socials__item
+        +svg(social).socials__icon

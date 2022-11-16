@@ -1,0 +1,38 @@
+header.header
+	.container
+		.header__wrapper
+			a.header__logo(href=data.header.links.logo)
+				img(src="./logo.svg", alt="logo" width="171" height="60")
+
+			nav.header__menu
+				.header__border
+					.header__button
+						button.header__close.btn.js-burger(type="button")
+							span
+							span
+					.header__logos
+						a(href="/").header__logo
+							img(src="./logo-2.svg", alt="logo" width="135" height="47")
+				.header__border
+					.header__list
+						each object, key in data.header.menu
+							a.header__link(
+								href=object.url
+								title!=object.name
+							)
+								!= object.name
+				.header__border
+					.header__languages
+						include ./lang.pug
+				.header__border
+					.header__social
+						include ./socials.pug
+			.header__right
+				include ./lang.pug
+				button.btn.btn__outline(type="button")
+					| Заказать сейчас
+
+			button.header__burger.btn.js-burger(type="button")
+				span
+				span
+				span
