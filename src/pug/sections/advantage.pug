@@ -1,0 +1,19 @@
+section.advantage
+  .container
+    .advantage__wrapper
+      .heading.heading--center
+        .header__block
+          p.heading__subtitle.text-center
+            | Преимущества
+          h2.heading__title.text-center
+            | Почему выбрать нас?
+      .advantage__items
+        - for (var i = 0; i < 3; i++) {
+          .advantage__item
+            .advantage__block
+              img.advantage__icon(src=`./images/icons/advantage-${i+1}.svg`, alt="" width="80" height="80")
+              h3.advantage__title
+                | Название преимущества
+              p.advantage__subtitle
+                | Определяем цели и задачи проекта, изучаем бизнес-процессы. Планируем архитектуру сайта, прототипируем и составляем ТЗ.
+        - }
