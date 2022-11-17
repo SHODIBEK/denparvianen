@@ -1,0 +1,55 @@
+// Projects Section Start
+section.projects
+  .container
+    .heading
+      .header__block
+        p.heading__subtitle
+          | Портфолио
+        h2.heading__title
+          | Наши работы
+      .heading__other.for-desktop
+        a(href="#").btn.btn__primary.projects__btn
+          | Посмотреть все
+    .projects__row
+      .projects__col.projects__col-5
+        - for(var i = 0; i < 2; i++) {
+          a.project-card.js-project(
+            href="javascript:void(0);"
+            data-image=`${baseDir}images/content/projects/project-${i+1}.jpg`
+            data-title="Название проекта"
+            data-subtitle="Lorem ipsum dolor sit amet consectetur. Eget at dictum feugiat amet semper tristique at suspendisse. Sagittis."
+            data-link="https://test.com"
+          )
+            +lazyImage({
+              src: `${baseDir}images/content/projects/project-${i+1}.jpg`,
+              alt: '',
+              appear: false,
+            }).project-card__image
+            h4.project-card__title
+              | Название проекта
+            p.project-card__subtitle
+              | Lorem ipsum dolor sit amet consectetur. Eget at dictum feugiat amet semper tristique at suspendisse. Sagittis.
+        - }
+      .projects__col.projects__col-7
+        - for(var i = 2; i < 4; i++) {
+          a.project-card.js-project(
+            href="javascript:void(0);"
+            data-image=`${baseDir}images/content/projects/project-${i+1}.jpg`
+            data-title="Название проекта"
+            data-subtitle="Lorem ipsum dolor sit amet consectetur. Eget at dictum feugiat amet semper tristique at suspendisse. Sagittis."
+            data-link="https://test.com"
+          )
+            +lazyImage({
+              src: `${baseDir}images/content/projects/project-${i+1}.jpg`,
+              alt: '',
+              appear: false,
+            }).project-card__image
+            h4.project-card__title
+              | Название проекта
+            p.project-card__subtitle
+              | Lorem ipsum dolor sit amet consectetur. Eget at dictum feugiat amet semper tristique at suspendisse. Sagittis.
+        - }
+    .for-mobile.mt-20
+      a(href="#").btn.btn__primary.projects__btn
+        | Посмотреть все
+// Projects Section End

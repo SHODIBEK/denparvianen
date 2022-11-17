@@ -9,18 +9,13 @@
 }
 
 .for-desktop {
-	@include devices {
+	@include mobile {
 		// stylelint-disable-next-line declaration-no-important
 		display: none !important;
 	}
 }
 
 .for-tablet {
-	@include desktop {
-		// stylelint-disable-next-line declaration-no-important
-		display: none !important;
-	}
-
 	@include mobile {
 		// stylelint-disable-next-line declaration-no-important
 		display: none !important;
@@ -54,6 +49,10 @@
 		display: table;
 		clear: both;
 	}
+}
+
+.mt-20 {
+	margin-top: 20px;
 }
 
 .visually-hidden {

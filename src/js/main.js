@@ -3,6 +3,7 @@ import './helpers';
 import './components/social';
 import './components/lang';
 import './components/slider';
+import './components/projects';
 import {ieFix} from './vendor/ie-fix';
 import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';

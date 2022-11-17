@@ -1,0 +1,104 @@
+.projects {
+  margin: 90px 0;
+  @include mobile {
+    margin: 50px 0;
+  }
+  &__btn {
+    padding: 0 65px;
+    height: 67px;
+
+    @include mobile {
+      height: 59px;
+      color: var(--primary-color);
+      background: #EAEDFF;
+      box-shadow: none;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+    @include mobile {
+      margin: 0 -5px;
+    }
+  }
+
+  &__col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+
+    @include mobile {
+      padding: 0 5px;
+    }
+
+    &-5 {
+      @include desktop {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+      }
+    }
+
+    &-7 {
+      @include desktop {
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+      }
+    }
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 45px;
+
+  @include mobile {
+    margin-bottom: 10px;
+  }
+
+  &__image {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    border-radius: 13px;
+    overflow: hidden;
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+
+      @include mobile {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+}
