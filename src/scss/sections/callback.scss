@@ -1,0 +1,88 @@
+.callback {
+  margin: 90px 0;
+
+  @include tablet {
+    margin: 50px 0;
+  }
+
+  @include mobile {
+    margin: 50px 0;
+  }
+
+  &__section {
+    position: relative;
+    padding: 50px;
+    min-height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-image: url('../images/content/callback-bg.svg');
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      padding: 40px 50px;
+      min-height: auto;
+    }
+
+    @include mobile {
+      padding: 50px 16px;
+      margin: 0 -16px;
+      border-radius: 0;
+      background-image: url('../images/content/callback-bg-mob.svg');
+    }
+  }
+
+  &__block {
+    width: 60%;
+
+    @include tablet {
+      width: 70%;
+    }
+
+    @include mobile {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+    color: #fff;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @include mobile {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subtitle {
+    font-family: var(--font-secondary);
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}

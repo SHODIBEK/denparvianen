@@ -1,6 +1,10 @@
 .services-section {
   margin: 90px 0;
 
+  @include tablet {
+    margin: 50px 0;
+  }
+
   @include mobile {
     margin: 50px 0;
   }
