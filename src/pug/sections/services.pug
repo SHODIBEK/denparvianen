@@ -1,0 +1,28 @@
+// Services Section Start
+section.services-section
+  .container
+    .border-text.services-section--absolute.services-section--first
+      | DESIGN
+    .border-text.services-section--absolute.services-section--second
+      | CODE
+    .border-text.services-section--absolute.services-section--third
+      | IMPLEMENT
+    .services-section__wrapper
+      .heading.services-section__title
+        .header__block
+          p.heading__subtitle
+            | Услуги
+          h2.heading__title
+            | Что мы прилагаем?
+        .heading__other
+          include ../components/sliderNav
+      .services-section__slider
+        .swiper
+          .swiper-wrapper
+            each object in data.home.card
+              .swiper-slide
+                article.card
+                  img(src="./images/content/hero/dot-1.svg", alt="dot" width="29" height="29").card__icon
+                  h3.card__title!=object.title
+                  p.card__subtitle!=object.subtitle
+          .swiper-pagination

@@ -38,6 +38,10 @@ main {
 
 p {
 	margin: 0;
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
 }
 
 a,
@@ -209,10 +213,126 @@ iframe {
 	min-height: 100vh; // fallback
 	// stylelint-disable-next-line
 	min-height: var(--vh);
+	overflow-x: hidden;
+}
+
+.heading {
+	position: relative;
+	margin-bottom: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include mobile {
+		margin-bottom: 22px;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__title {
+		margin: 0;
+		font-weight: 800;
+		font-size: 40px;
+		line-height: 48px;
+		color: var(--secondary-color);
+
+		@include mobile {
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+
+	&__subtitle {
+		margin-top: 0;
+		margin-bottom: -4px!important;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 24px;
+		color: var(--third-color);
+
+		@include mobile {
+			font-size: 14px;
+			line-height: 16px;
+		}
+	}
 }
 
 .form-group {
 	position: relative;
+}
+
+.swiper-pagination {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	&-bullet {
+		display: inline-block;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		width: 39px;
+		height: 10px;
+		background: #D7D7D7;
+		border-radius: 50px;
+		cursor: pointer;
+		transition: 0.3s linear;
+
+		&-active {
+			margin-right: 15px;
+			width: 123px;
+			background: var(--primary-color);
+			transition: 0.3s linear;
+		}
+	}
+}
+
+.swiper-buttons {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	@include mobile {
+		display: none;
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	width: 44px;
+	height: 44px;
+	border: 1px solid #929292;
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+	@include hover {
+		border-color: var(--primary-color);
+		transition: 0.3s ease-in-out;
+
+		svg {
+			stroke: var(--primary-color);
+			transition: 0.3s ease-in-out;
+		}
+	}
+
+	svg {
+		width: 24px;
+		height: 24px;
+		stroke: #929292;
+		fill: none;
+		transition: 0.3s ease-in-out;
+	}
+}
+
+.border-text {
+	font-weight: 900;
+	font-size: 144px;
+	line-height: 145%;
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgba(74, 97, 240, 0.1);
 }
 
 /* stylelint-disable */
