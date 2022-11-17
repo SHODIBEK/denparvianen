@@ -1,7 +1,9 @@
 .header {
-  position: relative;
+  position: absolute;
   padding: 20px 0;
-  background: radial-gradient(97.46% 173.43% at 86.18% -10.64%, #2E3192 0%, #2A2D86 6%, #181A4D 38%, #0B0C23 66%, #030309 87%, #000000 100%);
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1025;
 
   &__wrapper {
