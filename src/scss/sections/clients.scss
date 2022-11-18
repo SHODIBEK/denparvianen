@@ -1,0 +1,27 @@
+.clients {
+  margin: 90px 0;
+  padding: 66px 0;
+  background-color: #F4F6FE;
+
+  @include tablet {
+    margin: 50px 0;
+  }
+
+  @include mobile {
+    margin: 50px 0;
+    .swiper-wrapper {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .swiper-slide {
+      width: auto;
+    }
+  }
+
+  .swiper-wrapper {
+    align-items: center;
+  }
+}

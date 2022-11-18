@@ -1,4 +1,5 @@
 import Swiper, { Navigation, Pagination, Grid } from 'swiper';
+import helpers from '../helpers';
 
 // init swiper slider
 const servicesSlider = new Swiper('.services-section .swiper', {
@@ -26,3 +27,38 @@ const servicesSlider = new Swiper('.services-section .swiper', {
     }
   }
 });
+
+var init = false;
+let clientSlider;
+
+function swiperCard() {
+  if (window.innerWidth >= 768) {
+    if (!init) {
+      init = true;
+      clientSlider = new Swiper('.clients .swiper', {
+        modules: [Navigation, Pagination],
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: '.clients .swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.clients .swiper-button-next',
+          prevEl: '.clients .swiper-button-prev',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 5,
+          }
+        }
+      });
+    }
+  } else if (init) {
+    clientSlider.destroy();
+    init = false;
+  }
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);

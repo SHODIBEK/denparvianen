@@ -1,0 +1,19 @@
+// Clients section Start
+section.clients
+  .container
+    .clients__wrapper
+      .heading
+        .header__block
+          p.heading__subtitle
+            | Наши клиенты
+          h2.heading__title
+            | С кем мы работали?
+        .heading__other
+          include ../components/sliderNav
+      .clients__slider.swiper
+        .swiper-wrapper
+          - for (var i = 0; i < 5; i++) {
+            .swiper-slide
+              img(src=`./images/content/clients/client-${i+1}.png`, alt="")
+          - }
+// Clients section End
