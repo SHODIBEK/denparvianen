@@ -15,3 +15,4 @@ window.objectFitImages = objectFitImages;
 // window.objectFitVideos = objectFitVideos;
 
 require('ninelines-ua-parser');
+require('jquery-validation');

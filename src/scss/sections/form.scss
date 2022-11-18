@@ -1,0 +1,260 @@
+.section-form {
+  margin: 90px 0;
+
+  @include tablet {
+    margin: 50px 0;
+  }
+
+  @include mobile {
+    margin: 50px 0;
+  }
+
+  &__block {
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0px 4px 80px rgba(74, 97, 240, 0.1);
+    border-radius: 20px;
+
+    @include mobile {
+      padding: 0;
+      box-shadow: none;
+      border-radius: none;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+      line-height: 39px;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 24px;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+    }
+  }
+
+  &__checkboxs {
+    margin-bottom: 30px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inputs {
+    margin-bottom: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      margin-top: 10px;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .btn {
+    @include desktop {
+      height: 67px;
+      padding: 0 37px;
+      line-height: 67px;  
+    }
+    @include tablet {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+}
+
+.agree {
+  position: relative;
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+  @include tablet {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+
+    &:checked ~ label {
+      &::before {
+        background-color: var(--primary-color);
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  label {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-start;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-top: 2px;
+      margin-right: 12px;
+      width: 20px;
+      height: 20px;
+      flex: 0 0 20px;
+      border-radius: 5px;
+      border: 1px solid rgba(130, 130, 130, 0.36);
+      transition: 0.3s linear;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 4px;
+      left: 7px;
+      width: 6px;
+      height: 12px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      opacity: 0;
+      transform: rotate(45deg);
+      transition: 0.3s linear;
+    }
+  }
+}
+
+.checkboxs-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  @include mobile {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.checkbox-group {
+  position: relative;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+
+    &:checked ~ label {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+  }
+
+  label {
+    padding: 15px 22px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #070F3A;
+    background-color: #fff;
+    border: 2px solid #E0E4F6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    @include hover {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+
+    @include tablet {
+      padding: 8px 15px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @include mobile {
+      padding: 10px 15px;
+      font-size: 12px;
+      line-height: 18px;
+      min-width: max-content;
+    }
+  }
+}
+
+.inputs-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+
+  &__col {
+    margin-bottom: 20px;
+    padding: 0 10px;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  &__col-6 {
+    @include tablet {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+    @include desktop {
+      max-width: 50%;
+      flex: 0 0 50%;
+    }
+  }
+}

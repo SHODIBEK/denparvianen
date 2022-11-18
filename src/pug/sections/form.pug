@@ -1,0 +1,25 @@
+section.section-form
+  .container
+    form.section-form__block.js-validation(action="/")
+      h2.section-form__title  
+        | Остались вопросы?
+      p.section-form__subtitle
+        | Lorem ipsum dolor sit amet consectetur. A sollicitudin nisl eget eu et ut nisl. Sagittis lorem libero
+      .checkboxs-group.section-form__checkboxs
+        each object, key in data.home.checkboxes
+          .checkbox-group
+            input(type="checkbox", name="choice", id=`choice-${key}` value!=object.value)
+            label(for=`choice-${key}`)!=object.name
+      .inputs-group.section-form__inputs
+        .form-group.inputs-group__col.inputs-group__col-6
+          input(type="text", name="name", placeholder="Ваше имя")
+        .form-group.inputs-group__col.inputs-group__col-6
+          input(type="email", name="email", placeholder="Ваш email")
+        .form-group.inputs-group__col
+          textarea(name="message", id="message" placeholder="Напишите сюда...")
+      .section-form__bottom
+        .agree
+          input(type="checkbox", name="agree", id="agree")
+          label(for="agree") Lorem ipsum dolor sit amet consectetur. A sollicitudin nisl eget eu et ut nisl. Sagittis lorem libero 
+        button.btn.btn__primary(type="submit")
+          | Отправить
