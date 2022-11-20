@@ -2,8 +2,8 @@ header.header
 	.container
 		.header__wrapper
 			a.header__logo(href=data.header.links.logo)
-				img(src="./logo.svg", alt="logo" width="171" height="60")
-
+				img(src="./logo.svg", alt="logo" width="171" height="60").header__logo--white
+				img(src="./logo-3.svg", alt="logo" width="171" height="60").header__logo--blue
 			nav.header__menu
 				.header__border
 					.header__button
@@ -19,6 +19,7 @@ header.header
 							a.header__link(
 								href=object.url
 								title!=object.name
+								class=object.name == title ? 'header__link--active' : ''
 							)
 								!= object.name
 				.header__border

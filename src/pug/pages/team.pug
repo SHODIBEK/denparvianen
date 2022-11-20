@@ -1,0 +1,31 @@
+main.main
+  .content
+    .content__header
+      picture.content__bg
+        source(srcset='./images/content/team/bg.jpg' media='(min-width: 768px)')
+        img(src='./images/content/team/bg-mob.jpg' alt='bg')
+      .container
+        .content__block
+          .breadcrumbs.content__breadcrumbs
+            .breadcrumbs__item
+              a(href="/").breadcrumbs__link
+                | Главная
+            .breadcrumbs__item
+              span.breadcrumbs__link.breadcrumbs--active
+                | Наша команда
+          h2.content__title
+            | Наша команда
+          p.content__subtitle
+            | Создадим конверсионный сайт для решения ваших бизнес-задач. Любая сложность: от лендингов до корпоративных порталов и интернет-магазинов.
+    .content__body
+      .container
+        .team__items
+          each object, i in data.team.teams
+            .team__block(class=i == 1 || i == 3 ? 'team__block--reverse' : '' data-aos="fade-up"  data-aos-delay=`${i*2}`)
+              img(src=`./images/content/team/avatar-${i+1}.jpg`, alt!=object).team__picture
+              .team__info
+                h2.team__title!=object
+                p.team__state
+                  | CEO
+                p.team__desc
+                  | Lorem ipsum dolor sit amet consectetur. Fames neque hac amet in ac. In sed ut a enim. Pretium sed dui cursus egestas.

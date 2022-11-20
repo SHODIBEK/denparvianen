@@ -1,0 +1,43 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile {
+    justify-content: center;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 5px;
+
+      &::after {
+        content: "/";
+        display: inline-block;
+        margin-left: 5px;
+        color: #fff;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: #fff;
+
+    @include hover {
+      &:not(.breadcrumbs--active) {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  &--active {
+    font-weight: 600;
+    cursor: default;
+  }
+}

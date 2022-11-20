@@ -167,6 +167,12 @@
     }
   }
 
+  &__logo {
+    &--blue {
+      display: none!important;
+    }
+  }
+
   &__logos {
     margin-bottom: 40px;
     display: flex;
@@ -231,5 +237,40 @@
         transition: 0.3s ease-in-out;
       }
     }
+  }
+}
+
+.inner-page {
+  .header {
+    position: relative;
+
+    &__link {
+      color: var(--secondary-color);
+
+      &--active {
+        color: var(--primary-color) ;
+      }
+    }
+
+    &__logo {
+      &--white {
+        display: none!important;
+      }
+
+      &--blue {
+        display: block!important;
+      }
+    }
+
+    &__burger {
+      span {
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+
+  .btn__outline {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
   }
 }

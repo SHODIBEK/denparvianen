@@ -10,6 +10,7 @@ import {actualYear} from './modules/actualYear';
 import header from './components/header';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
+import AOS from 'aos';
 
 ieFix();
 vhFix();
@@ -18,3 +19,6 @@ scrollToAnchor.init();
 
 header.init();
 lazyLoading.init();
+AOS.init({
+  duration: 1500
+});

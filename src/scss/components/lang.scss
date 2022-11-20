@@ -145,3 +145,11 @@
     }
   }
 }
+
+.inner-page {
+  .languages {
+    &__name {
+      color: var(--secondary-color);
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.team {
+  &__block {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    @include tablet {
+      padding: 50px 40px;
+    }
+
+    @include mobile {
+      padding: 50px 18px;
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include mobile {
+        margin-bottom:20px;
+      }
+    }
+
+    &--reverse {
+      @include tablet {
+        flex-direction: row-reverse;
+      }
+      @include desktop {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__picture {
+    width: 274px;
+    height: 274px;
+    flex: 0 0 274px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    display: block;
+  }
+
+  &__info {
+    width: 370px;
+    flex: 0 1 370px;
+
+    @include tablet {
+      width: 100%;
+      flex: 0 1 100%;
+    }
+
+    @include mobile {
+      width: 100%;
+      flex: 0 1 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__state {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #4F5665;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
