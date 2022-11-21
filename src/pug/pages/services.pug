@@ -1,0 +1,127 @@
+- var checkedList = ['Unlimited Bandwitch', 'Encrypted Connection', 'Yes Traffic Logs', 'Works on All Devices', 'Connect Anyware']
+- var prices = [{title: 'Basic', price: '120', className: 'basic'}, {title: 'Plus', price: '150', className: 'plus'}, {title: 'Premium', price: '180', className: 'premium'}]
+
+main.main
+  main.main
+  .content
+    .content__header
+      picture.content__bg
+        source(srcset='./images/content/services/bg.jpg' media='(min-width: 768px)')
+        img(src='./images/content/services/bg-mob.jpg' alt='bg')
+      .container
+        .content__block
+          .breadcrumbs.content__breadcrumbs
+            .breadcrumbs__item
+              a(href="/").breadcrumbs__link
+                | Главная
+            .breadcrumbs__item
+              span.breadcrumbs__link.breadcrumbs--active
+                | Наши услуги
+          h2.content__title
+            | Наши услуги
+          p.content__subtitle
+            | Создадим конверсионный сайт для решения ваших бизнес-задач. Любая сложность: от лендингов до корпоративных порталов и интернет-магазинов.
+    .content__body
+      .container
+        .services__grid
+          aside.services__aside
+            nav.services__nav
+              each link, key in data.services.links
+                a.services__link.js-tab-link(
+                  href=`tab-${link.value}`,
+                  title!=link.name,
+                  class=key == 0 ? 'is-active' : ''
+                )!=link.name
+          section.services__content
+            each tab, i in data.services.links
+              .services__block.js-tab-block(
+                class=i == 0 ? 'is-active' : ''
+                data-id=`tab-${tab.value}`
+              )
+                .tabs__links.tabs__links--hidden
+                  each tab, a in data.services.tabs
+                    a.tabs__link.js-tab-link(
+                      href=`tab-${tab.value}`,
+                      title!=tab.name,
+                      class=a == 0 ? 'is-active' : ''
+                    )!=tab.name
+                .tabs__select.for-mobile-tablet
+                  select(name="tabs-link")
+                    each tab, a in data.services.tabs
+                      option(value=`tab-${tab.value}`)!=tab.name
+                .tabs__lists
+                  each tab, a in data.services.tabs
+                    .tabs__list.js-tab-block(
+                      class=a == 0 ? "is-active" : ''
+                      data-id=`tab-${tab.value}`
+                    )
+                      .default-section
+                        h5
+                          | Разработка #{tab.name} под ключ
+                        p 
+                          | Создание многостраничного сайта-каталога любого масштаба с интеграцией с CRM, API и современным дизайном
+                        .advantage__lists.services__advantage
+                          - for (var i = 0; i < 3; i++) {
+                            .advantage__list
+                              .advantage__box
+                                img.advantage__img(src=`./images/icons/advantage-${i+1}.svg`, alt="" width="80" height="80")
+                                .advantage__name
+                                  | Название преимущества
+                                .advantage__desc
+                                  | Определяем цели и задачи проекта, изучаем бизнес-процессы. Планируем архитектуру сайта, прототипируем и составляем ТЗ.
+                          - }
+                        .prices__wrapper.services__prices
+                          .prices__left
+                            .prices__subtitle
+                              | Цены
+                            .prices__title
+                              | Наши цены
+                            .prices__desc
+                              | Lorem ipsum dolor sit amet consectetur. Vestibulum nisi volutpat vestibulum sed massa facilisis semper. Tellus ullamcorper sit sed sagittis.
+                            ul.prices__lists
+                              each check in checkedList
+                                li.prices__list
+                                  span.checked
+                                  | #{check}
+                          .prices__right
+                            each price in prices
+                              .prices__block(class=`prices__block--${price.className}`)
+                                .prices__block-info
+                                  .prices__block-title!=price.title
+                                  .prices__block-subtitle
+                                    | Определяем цели и задачи проекта
+                                .prices__block-price
+                                  b.prices__block-strong
+                                    | #{price.price}$
+                                  | / в месяц
+                        .services__title
+                          | Преимущества
+                        .services__subtitle
+                          | Как мы создаем качественный каталог товаров
+                        p
+                          | Изучаем конъюнктуру рынка и потребности целевой аудитории. Ориентируемся на высокие конверсии: продуманная структура, современный дизайн, актуальный контент. Главные критерии — визуально понятный интерфейс, удобная навигация, высокая скорость загрузки страниц, адаптивность и масштабируемость.
+                        .services__items
+                          - for(var i = 0; i < 3; i++) {
+                            .services__item
+                              .services__item-block(
+                                class=i == 0 ? 'services__item--first' : ''
+                                class=i == 1 ? 'services__item--second' : ''
+                                class=i == 2 ? 'services__item--third' : ''
+                              )
+                                .services__item-number
+                                  | 0#{i+1}
+                                .services__item-title
+                                  | Название
+                                .services__item-subtitle
+                                  | Lorem ipsum dolor sit amet consectetur. Viverra faucibus tempor congue et lorem vel quis augue.
+                          - }
+                        form(action="/").services__form.js-validation
+                          .services__form-title
+                            | Заказать консултатцию
+                          .services__form-subtitle
+                            | Lorem ipsum dolor sit amet consectetur. A sollicitudin nisl eget eu et ut nisl. Sagittis lorem libero
+                          .services__form-group.form-input
+                            input(type="email" name="email" placeholder="Email адрес")
+                            button(class="btn btn__primary" type="submit")
+                              | Заказать звонок
+                            

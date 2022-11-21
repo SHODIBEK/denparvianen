@@ -71,6 +71,7 @@
 		"core-js": "3.15.2",
 		"husky": "7.0.1",
 		"jquery": "3.6.0",
+		"jquery-custom-select": "1.6.4",
 		"jquery-validation": "1.19.5",
 		"lozad": "1.16.0",
 		"ninelines-sharing": "1.5.8",

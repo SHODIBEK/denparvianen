@@ -16,3 +16,4 @@ window.objectFitImages = objectFitImages;
 
 require('ninelines-ua-parser');
 require('jquery-validation');
+require('jquery-custom-select');

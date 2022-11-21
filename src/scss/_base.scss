@@ -291,10 +291,6 @@ iframe {
 			font-size: 14px;
 			line-height: 49px;
 		}
-
-		&.error {
-			border-color: red;
-		}
 	}
 
 
@@ -321,12 +317,17 @@ iframe {
 	}
 }
 
+input.error {
+	border-color: red!important;
+}
+
 span.error {
 	position: absolute;
 	top: 105%;
 	font-family: var(--font-secondary);
 	font-size: 12px;
 	color: red;
+	display: block;
 
 	@include tablet {
 		font-size: 10px;
@@ -574,6 +575,15 @@ span.error {
 			padding: 50px 0;
 		}
 	}
+}
+
+.checked {
+	display: inline-block;
+	width: 9px;
+	height: 14px;
+  border: solid var(--check-color);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 /* stylelint-disable */

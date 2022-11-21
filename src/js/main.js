@@ -4,6 +4,7 @@ import './components/social';
 import './components/lang';
 import './components/slider';
 import './components/projects';
+import './components/tabs';
 import {ieFix} from './vendor/ie-fix';
 import {vhFix} from './vendor/vh-fix';
 import {actualYear} from './modules/actualYear';
@@ -22,3 +23,5 @@ lazyLoading.init();
 AOS.init({
   duration: 1500
 });
+
+$('select').customSelect();

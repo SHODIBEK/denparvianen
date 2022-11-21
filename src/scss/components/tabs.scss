@@ -1,0 +1,114 @@
+.tabs {
+
+  &__links {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    align-items: center;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+      background-color: #f5f5f5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #555;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 5px;
+      background-color: #f5f5f5;
+    }
+
+    &--hidden {
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    display: block;
+    padding: 14px 15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #757575;
+    background-color: #f9f9f9;
+    min-width: max-content;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 4px;
+      margin: 0 auto;
+      background-color: var(--primary-color);
+      transition: 0.3s ease-in-out;
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid #d9d9d9;
+    }
+
+    @include active {
+      cursor: default;
+      pointer-events: none;
+      color: var(--secondary-color);
+      background-color: #fff;
+      &::after {
+        width: 100%;
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    @include hover {
+      color: var(--primary-color);
+      &::after {
+        width: 100%;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &__lists {
+    margin-top: 20px;
+  }
+}
+
+
+.js-tab-block {
+  display: none;
+  position: relative;
+  animation-duration: 1s;
+  @include active {
+    display: block;
+    animation-name: fade-in;
+
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
