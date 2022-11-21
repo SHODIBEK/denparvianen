@@ -1,12 +1,15 @@
-import Swiper, { Navigation, Pagination, Grid } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import helpers from '../helpers';
 
 // init swiper slider
 const servicesSlider = new Swiper('.services-section .swiper', {
-  modules: [Navigation, Pagination],
+  modules: [Navigation, Pagination, Autoplay],
   loop: true,
   slidesPerView: 1.2,
   spaceBetween: 0,
+  autoplay: {
+    delay: 3000,
+  },
   pagination: {
     el: '.services-section .swiper-pagination',
     clickable: true
@@ -36,10 +39,13 @@ function swiperCard() {
     if (!init) {
       init = true;
       clientSlider = new Swiper('.clients .swiper', {
-        modules: [Navigation, Pagination],
+        modules: [Navigation, Pagination, Autoplay],
         loop: true,
         slidesPerView: 1,
         spaceBetween: 30,
+        autoplay: {
+          delay: 3000,
+        },
         pagination: {
           el: '.clients .swiper-pagination',
           clickable: true
