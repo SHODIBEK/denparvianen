@@ -1,5 +1,5 @@
 // Services Section Start
-section.services-section
+section.services-section(data-aos="fade-up")
   .container
     .border-text.services-section--absolute.services-section--first
       | DESIGN
@@ -10,18 +10,18 @@ section.services-section
     .services-section__wrapper
       .heading.services-section__title
         .header__block
-          p.heading__subtitle
+          p.heading__subtitle(data-aos="fade-up" data-aos-delay="100")
             | Услуги
-          h2.heading__title
+          h2.heading__title(data-aos="fade-up" data-aos-delay="300")
             | Что мы прилагаем?
         .heading__other
           include ../components/sliderNav
       .services-section__slider
         .swiper
           .swiper-wrapper
-            each object in data.home.card
+            each object, key in data.home.card
               .swiper-slide
-                article.card
+                article.card(data-aos="fade-up" data-aos-delay=`${key+1*4}00`)
                   img(src="./images/content/hero/dot-1.svg", alt="dot" width="29" height="29").card__icon
                   h3.card__title!=object.title
                   p.card__subtitle!=object.subtitle

@@ -1,16 +1,16 @@
 // Advantage Section Start
-section.advantage
+section.advantage(data-aos="fade-up")
   .container
     .advantage__wrapper
       .heading.heading--center
         .header__block
-          p.heading__subtitle.text-center
+          p.heading__subtitle.text-center(data-aos="fade-up" data-aos-delay="100")
             | Преимущества
-          h2.heading__title.text-center
+          h2.heading__title.text-center(data-aos="fade-up" data-aos-delay="300")
             | Почему выбрать нас?
       .advantage__items
         - for (var i = 0; i < 3; i++) {
-          .advantage__item
+          .advantage__item(data-aos="fade-up" data-aos-delay=`${i+1*4}00`)
             .advantage__block
               img.advantage__icon(src=`./images/icons/advantage-${i+1}.svg`, alt="" width="80" height="80")
               h3.advantage__title

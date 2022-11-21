@@ -1,27 +1,27 @@
 // Form Section Start
-section.section-form
+section.section-form(data-aos="fade-up")
   .container
     form.section-form__block.js-validation(action="/")
-      h2.section-form__title  
+      h2.section-form__title(data-aos="fade-up" data-aos-delay="100")
         | Остались вопросы?
-      p.section-form__subtitle
+      p.section-form__subtitle(data-aos="fade-up" data-aos-delay="300")
         | Lorem ipsum dolor sit amet consectetur. A sollicitudin nisl eget eu et ut nisl. Sagittis lorem libero
       .checkboxs-group.section-form__checkboxs
         each object, key in data.home.checkboxes
-          .checkbox-group
+          .checkbox-group(data-aos="fade-up" data-aos-delay=`${key+1*4}00`)
             input(type="checkbox", name="choice", id=`choice-${key}` value!=object.value)
             label(for=`choice-${key}`)!=object.name
       .inputs-group.section-form__inputs
-        .form-group.inputs-group__col.inputs-group__col-6
+        .form-group.inputs-group__col.inputs-group__col-6(data-aos="fade-up" data-aos-delay=`100`)
           input(type="text", name="name", placeholder="Ваше имя")
-        .form-group.inputs-group__col.inputs-group__col-6
+        .form-group.inputs-group__col.inputs-group__col-6(data-aos="fade-up" data-aos-delay=`200`)
           input(type="email", name="email", placeholder="Ваш email")
-        .form-group.inputs-group__col
+        .form-group.inputs-group__col(data-aos="fade-up" data-aos-delay=`300`)
           textarea(name="message", id="message" placeholder="Напишите сюда...")
       .section-form__bottom
-        .agree
+        .agree(data-aos="fade-up" data-aos-delay=`300`)
           input(type="checkbox", name="agree", id="agree")
           label(for="agree") Lorem ipsum dolor sit amet consectetur. A sollicitudin nisl eget eu et ut nisl. Sagittis lorem libero 
-        button.btn.btn__primary(type="submit")
+        button.btn.btn__primary(type="submit" data-aos="fade-up" data-aos-delay=`400`)
           | Отправить
 // Form Section End

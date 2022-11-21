@@ -1,11 +1,11 @@
 // Projects Section Start
-section.projects
+section.projects(data-aos="fade-up")
   .container
     .heading
       .header__block
-        p.heading__subtitle
+        p.heading__subtitle(data-aos="fade-up" data-aos-delay="100")
           | Портфолио
-        h2.heading__title
+        h2.heading__title(data-aos="fade-up" data-aos-delay="300")
           | Наши работы
       .heading__other.for-desktop
         a(href="#").btn.btn__primary.projects__btn
@@ -19,6 +19,7 @@ section.projects
             data-title="Название проекта"
             data-subtitle="Lorem ipsum dolor sit amet consectetur. Eget at dictum feugiat amet semper tristique at suspendisse. Sagittis."
             data-link="https://test.com"
+            data-aos="fade-up" data-aos-delay=`${i+1*2}00`
           )
             .project-card__picture
               +lazyImage({
@@ -39,6 +40,7 @@ section.projects
             data-title="Название проекта"
             data-subtitle="Lorem ipsum dolor sit amet consectetur. Eget at dictum feugiat amet semper tristique at suspendisse. Sagittis."
             data-link="https://test.com"
+            data-aos="fade-up" data-aos-delay=`${i+1*2}00`
           )
             .project-card__picture
               +lazyImage({
@@ -52,6 +54,6 @@ section.projects
               | Lorem ipsum dolor sit amet consectetur. Eget at dictum feugiat amet semper tristique at suspendisse. Sagittis.
         - }
     .for-mobile.mt-20
-      a(href="#").btn.btn__primary.projects__btn
+      a(href="#").btn.btn__primary.projects__btn(data-aos="fade-up")
         | Посмотреть все
 // Projects Section End

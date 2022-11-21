@@ -1,19 +1,19 @@
 // Clients section Start
-section.clients
+section.clients(data-aos="fade-up")
   .container
     .clients__wrapper
       .heading
         .header__block
-          p.heading__subtitle
+          p.heading__subtitle(data-aos="fade-up" data-aos-delay="100")
             | Наши клиенты
-          h2.heading__title
+          h2.heading__title(data-aos="fade-up" data-aos-delay="300")
             | С кем мы работали?
         .heading__other
           include ../components/sliderNav
       .clients__slider.swiper
         .swiper-wrapper
           - for (var i = 0; i < 5; i++) {
-            .swiper-slide
+            .swiper-slide(data-aos="fade-up" data-aos-delay=`${i+1*4}00`)
               img(src=`./images/content/clients/client-${i+1}.png`, alt="")
           - }
 // Clients section End
