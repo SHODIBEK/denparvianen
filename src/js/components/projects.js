@@ -11,7 +11,7 @@ const projects = $('.js-project');
 */
 function writeModal(image, title, subtitle, link) {
   $('body').append(`
-    <div class="modal" id="project-modal">
+    <div class="modal" id="project-modal" style="display:block;">
       <div class="modal__wrapper">
         <button type="button" class="modal__close btn js-close-modal"><span class="sr-only">close</span></button>
         <div class="modal__block">
@@ -41,13 +41,12 @@ function getAllData(e) {
   writeModal(targetImage, targetTitle, targetSubtitle, targetUrl);
 }
 
-function openModal(e) {
+function openModal() {
   helpers.$body.addClass('modal-is-open');
   helpers.lockScroll(true, helpers.$body.find('.modal'));
-  getAllData(e)
 }
 
-function closeModal(e) {
+function closeModal() {
   $('.modal').fadeOut();
   helpers.$body.removeClass('modal-is-open');
   helpers.lockScroll(false, helpers.$body.find('.modal'));
@@ -57,10 +56,27 @@ function closeModal(e) {
   }, 1000);
 }
 
-projects.on('click', openModal);
+function initProject(e) {
+  getAllData(e);
+  openModal();
+}
+
+$('.js-close-modal').on('click', closeModal);
+
+projects.on('click', initProject);
 
 document.addEventListener("keydown", function (e) {
   if (e.keyCode == 27) {
     closeModal()
   }
+});
+
+$('.js-open-modal').on('click', (e) => {
+  e.preventDefault();
+
+  const target = $(e.currentTarget);
+  const targetUrl = target.attr('href');
+
+  $(targetUrl).fadeIn();
+  openModal();
 });

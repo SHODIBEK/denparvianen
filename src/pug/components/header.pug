@@ -1,3 +1,4 @@
+// Header Start
 header.header
 	.container
 		.header__wrapper
@@ -30,10 +31,11 @@ header.header
 						include ./socials.pug
 			.header__right
 				include ./lang.pug
-				button.btn.btn__outline(type="button")
+				a(href="#callback").btn.btn__outline.js-open-modal
 					| Заказать сейчас
 
 			button.header__burger.btn.js-burger(type="button")
 				span
 				span
 				span
+// Header End

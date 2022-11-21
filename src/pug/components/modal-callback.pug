@@ -1,0 +1,32 @@
+// Modal for Callback Start
+.modal#callback
+  .modal__wrapper
+    button(type="button" class="modal__close btn js-close-modal")
+      span.sr-only
+        | close
+    .modal__block
+      .modal__body
+        h2.modal__title
+          | Расчитать стоимость?
+        p.modal__subtitle
+          | Lorem ipsum dolor sit amet consectetur. A sollicitudin nisl eget eu et ut nisl. Sagittis lorem libero
+        form.modal__form.js-validation(action="/")
+          .checkboxs-group
+            each object, key in data.home.checkboxes
+              .checkbox-group
+                input(type="checkbox", name="choice", id=`modalChoise-${key}` value!=object.value)
+                label(for=`modalChoise-${key}`)!=object.name
+          .inputs-group.mt-20
+            .form-group.inputs-group__col.inputs-group__col-6
+              input(type="text", name="name", placeholder="Ваше имя")
+            .form-group.inputs-group__col.inputs-group__col-6
+              input(type="email", name="email", placeholder="Ваш email")
+            .form-group.inputs-group__col
+              textarea(name="message", id="message" placeholder="Напишите сюда...")
+          .section-form__bottom
+            .agree
+              input(type="checkbox", name="agree", id="agree2")
+              label(for="agree2") Lorem ipsum dolor sit amet consectetur. A sollicitudin nisl eget eu et ut nisl. Sagittis lorem libero 
+            button.btn.btn__primary(type="submit")
+              | Отправить
+// Modal for Callback End

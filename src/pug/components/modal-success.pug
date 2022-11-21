@@ -1,0 +1,16 @@
+// Modal for success Start
+.modal.modal--success
+  .modal__wrapper
+    button(type="button" class="modal__close btn js-close-modal")
+      span.sr-only
+        | close
+    .modal__block
+      .modal__body.modal--center
+        img(src="./images/icons/success.svg", alt="success icon" width="120" height="120" style="margin-bottom: 20px;")
+        h2.modal__title
+          | Сообщение успешно отправлено
+        p.modal__subtitle
+          | Мы ответим Вам, в скором времени
+        button.btn.btn__primary.js-close-modal(type="button")
+          | Закрыть
+// Modal for success End

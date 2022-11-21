@@ -1,3 +1,4 @@
+// Footer Start
 footer.footer
   .container
     .footer__wrapper
@@ -13,7 +14,7 @@ footer.footer
               each nav in data.header.menu
                 .nav__item
                   a.nav__link(href=nav.url title!=nav.name)!=nav.name
-          form.footer__form.form-subs
+          form.footer__form.form-subs.js-validation
             .form-subs__title
               | Будьте в курсе дела!
             .form-subs__group.form-group
@@ -28,4 +29,4 @@ footer.footer
             | Terms & Conditions
           a(href="#policy" title="Privacy & Policy").footer__link
             | Privacy & Policy
-
+// Footer End
