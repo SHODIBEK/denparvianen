@@ -46,8 +46,12 @@ try {
     $body.='<p><strong>Почта:</strong> '.$email.'</p>';
   }
 
-  if(trim(!empty($radio))) {
+  if(trim(!empty($message))) {
     $body.='<p><strong>Сообщение:</strong> '.$message.'</p>';
+  }
+
+  if(trim(!empty($choise))) {
+    $body.='<p><strong>Выбранные услуги:</strong> '.$choise.'</p>';
   }
 
   // Отправка сообщения
