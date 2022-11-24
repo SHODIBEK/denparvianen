@@ -24,14 +24,14 @@ try {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'login'; // Логин на почте
-  $mail->Password   = 'password'; // Пароль на почте
+  $mail->Username   = 'shodik91@gmail.com'; // Логин на почте
+  $mail->Password   = 'RasamaxaMdd6035438@'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
   $mail->setFrom('noreply@example.com', 'Mailer');// Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('youremail@gmail.com', 'Владельцу ресурса');  
+  $mail->addAddress('shodik91@gmail.com', 'Владельцу ресурса');  
   // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
   // Формирование самого письма
