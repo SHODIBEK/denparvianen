@@ -25,9 +25,9 @@ try {
   // Настройки вашей почты
   $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
   $mail->Username   = 'shodik91@gmail.com'; // Логин на почте
-  $mail->Password   = 'RasamaxaMdd6035438@'; // Пароль на почте
-  $mail->SMTPSecure = 'ssl';
-  $mail->Port       = 465;
+  $mail->Password   = 'acwkhcsgbxdtuhqc'; // Пароль на почте
+  $mail->SMTPSecure = 'tls';
+  $mail->Port       = 587;
   $mail->setFrom('noreply@example.com', 'Mailer');// Адрес самой почты и имя отправителя
 
   // Получатель письма
