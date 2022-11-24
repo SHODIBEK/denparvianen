@@ -36,7 +36,6 @@
     font-size: 20px;
     line-height: 150%;
     color: #4F4F4F;
-    background-color: #fff;
     border-radius: 15px;
     transition: 0.3s ease-in-out;
 
@@ -47,6 +46,7 @@
     @include active {
       font-weight: 700;
       color: var(--secondary-color);
+      background-color: #fff;
       box-shadow: 0px 4px 50px rgba(74, 97, 240, 0.19);
       cursor: default;
       pointer-events: none;
@@ -55,6 +55,7 @@
 
     @include hover {
       color: var(--secondary-color);
+      background-color: #fff;
       box-shadow: 0px 4px 50px rgba(74, 97, 240, 0.19);
       transition: 0.3s ease-in-out;
     }

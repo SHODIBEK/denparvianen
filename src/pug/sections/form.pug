@@ -9,7 +9,7 @@ section.section-form(data-aos="fade-up")
       .checkboxs-group.section-form__checkboxs
         each object, key in data.home.checkboxes
           .checkbox-group(data-aos="fade-up" data-aos-delay=`${key+1*4}00`)
-            input(type="checkbox", name="choice", id=`choice-${key}` value!=object.value)
+            input(type="checkbox", name="choice[]", id=`choice-${key}` value!=object.value)
             label(for=`choice-${key}`)!=object.name
       .inputs-group.section-form__inputs
         .form-group.inputs-group__col.inputs-group__col-6(data-aos="fade-up" data-aos-delay=`100`)

@@ -27,8 +27,9 @@ $(".js-validation").each(function() {
     },
     submitHandler: function(form) {
       var serializedData = $(form).serialize();
+
       $.ajax({
-          url: "url.php", 
+          url: "send.php", 
           type: "POST",             
           data: serializedData,
           success: function(data) {
